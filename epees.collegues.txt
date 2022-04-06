@@ -1,0 +1,28 @@
+Algorithme EpeesCollegues
+
+Constante (TAILLE:entier) <== 13;
+T = tableau[1 .. TAILLE] de chaînes de caractères {Alban, Jim, Bob, Albatroz, Jinto, Bow, Hijo, Manu, Seb, Teilo, Charles, Xavier,Moez};
+
+Début
+
+var échange : booléen;
+    i,aux : entier;
+
+échange = vrai;
+tant que échange faire
+  échange = faux
+ pour i allant de 0 à longueur(T)-2 faire
+  si T[i]>T[i+1] alors
+   aux = T[i];
+   T[i] = T[i+1];
+   T[i+1] = aux;
+   échange = vrai;
+  Fin si 
+ Fin pour
+Fin tant que
+
+Fin
+
+   
+
+

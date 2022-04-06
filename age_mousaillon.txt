@@ -1,0 +1,26 @@
+Algorithme AgeMoussaillon
+
+Constante (TAILLE : entier) <== 8;
+T : tableau[1 .. TAILLE] d'entiers {45, 54, 23, 32, 64, 46, 28, 82};
+var enCours,plusGrand,j,aux : entier;
+
+début
+
+Pour enCours allant de 1 à TAILLE-1 par pas de 1 faire
+   plusGrand = enCours;
+   Pour j allant de enCours+1 à TAILLE par pas de 1 faire
+     Si T[j] > T[plusGrand] alors
+       plusGrand = j;
+       aux = T[enCours];
+       T[enCours] = T[plusGrand];
+       T[plusGrand] = aux;
+      Fin Si
+    Fin Pour
+Fin Pour
+
+Afficher("Le tableau trié par ordre croissant est :");
+Pour j allant de 1 à TAILLE par pas de 1 faire
+ Afficher(T[j]);
+Fin pour
+
+Fin
